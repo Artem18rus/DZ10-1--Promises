@@ -11,7 +11,7 @@ export default class GameSavingLoader {
             const value = json(data);
             resolve(value);
           });
-      }, 0);
+      }, 1000);
     });
   }
 }
