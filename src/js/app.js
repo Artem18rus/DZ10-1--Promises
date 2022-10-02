@@ -1,9 +1,11 @@
+/* eslint-disable import/extensions */
+/* eslint-disable arrow-body-style */
 import json from './parser.js';
 import read from './reader.js';
 
 export default class GameSavingLoader {
   static load() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         read()
           .then((val) => val)
@@ -17,7 +19,7 @@ export default class GameSavingLoader {
 }
 
 GameSavingLoader.load().then((saving) => {
-  return JSON.parse(saving)
+  return JSON.parse(saving);
 }, (error) => {
   return error;
 });
