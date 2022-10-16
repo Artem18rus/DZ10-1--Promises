@@ -5,7 +5,7 @@ import read from './reader.js';
 
 export default class GameSavingLoader {
   static load() {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       setTimeout(() => {
         read()
           .then((val) => val)
@@ -23,3 +23,4 @@ GameSavingLoader.load().then((saving) => {
 }, (error) => {
   return error;
 });
+//GameSavingLoader.load();
